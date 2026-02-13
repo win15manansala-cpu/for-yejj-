@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery of memories for Yejj.">
+  <title>Gallery — Yejj</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing">
+  <svg width="0" height="0" style="position:absolute">
+    <filter id="backdrop-crumple">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" seed="7" result="noise"/>
+      <feGaussianBlur in="noise" stdDeviation="0.7" result="heightmap"/>
+      <feDiffuseLighting in="heightmap" lighting-color="#ffffff" surfaceScale="3" result="diff">
+        <feDistantLight azimuth="220" elevation="45"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="heightmap" lighting-color="#ffffff" surfaceScale="1.2" specularConstant="0.15" specularExponent="12" result="spec"/>
+      <feMerge>
+        <feMergeNode in="diff"/>
+        <feMergeNode in="spec"/>
+      </feMerge>
+    </filter>
+  </svg>
+  <header class="intro fade-seq">
+    <div class="site-nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">☰</button>
+    </div>
+    <h1 class="title">Gallery of Memories</h1>
+    <p class="subtitle">A little gallery to revisit after reading the message</p>
+  </header>
+  <nav id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="index.html">Back to Message</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="gallery fade-seq" aria-label="Birthday photo gallery">
+      <figure class="gallery-item">
+        <img class="lazy blur-up zoomable" loading="lazy" decoding="async" fetchpriority="low"
+             alt="Personal memory photo 1"
+             src="img1.jfif"
+             data-src="img1.jfif"
+             sizes="(max-width: 768px) 100vw, 50vw">
+        <div class="frame-loader" aria-hidden="true"><div class="spinner"></div></div>
+      </figure>
+
+      <figure class="gallery-item">
+        <img class="lazy blur-up zoomable" loading="lazy" decoding="async" fetchpriority="low"
+             alt="Personal memory photo 2"
+             src="img2.jfif"
+             data-src="img2.jfif"
+             sizes="(max-width: 768px) 100vw, 50vw">
+        <div class="frame-loader" aria-hidden="true"><div class="spinner"></div></div>
+      </figure>
+
+      <figure class="gallery-item">
+        <img class="lazy blur-up zoomable" loading="lazy" decoding="async" fetchpriority="low"
+             alt="Personal memory photo 3"
+             src="img3.jfif"
+             data-src="img3.jfif"
+             sizes="(max-width: 768px) 100vw, 50vw">
+        <div class="frame-loader" aria-hidden="true"><div class="spinner"></div></div>
+      </figure>
+
+      <figure class="gallery-item">
+        <img class="lazy blur-up zoomable" loading="lazy" decoding="async" fetchpriority="low"
+             alt="Personal memory photo 4"
+             src="img4.jfif"
+             data-src="img4.jfif"
+             sizes="(max-width: 768px) 100vw, 50vw">
+        <div class="frame-loader" aria-hidden="true"><div class="spinner"></div></div>
+      </figure>
+    </section>
+
+    <div id="viewer" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+      <div class="viewer" data-index="0">
+        <div class="viewer-image">
+          <img class="viewer-img" alt="" loading="lazy">
+          <div class="viewer-loader"><div class="spinner"></div></div>
+          <div class="viewer-controls">
+            <button class="viewer-btn prev" aria-label="Previous"></button>
+            <button class="viewer-btn next" aria-label="Next"></button>
+          </div>
+          <button class="viewer-close" aria-label="Close">✕</button>
+        </div>
+        <aside class="viewer-meta" aria-hidden="true"></aside>
+      </div>
+    </div>
+
+    <div class="cta-wrapper fade-seq cta-delay">
+      <a class="cta-button" href="index.html">
+        <span>Back to Message</span>
+        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 4l1.41 1.41L8.83 10H20v2H8.83l4.58 4.59L12 18l-8-8 8-8z"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+  <script defer src="script.js"></script>
+</body>
+</html>

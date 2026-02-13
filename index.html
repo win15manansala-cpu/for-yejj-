@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A surprise birthday experience for Gianna with heartfelt messages and beautiful visuals.">
+    <meta property="og:title" content="Happy Birthday, Gianna!">
+    <meta property="og:description" content="A memorable, heartfelt birthday experience with messages and gallery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1541782951020-5117411d19c3?q=80&w=1200&auto=format&fit=crop">
+    <title>For Yejj — Message</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script defer src="script2.js"></script>
+</head>
+<body>
+  <div class="center-shell">
+    <div class="progress-bar" id="progress" aria-hidden="true"></div>
+    <svg width="0" height="0" style="position:absolute">
+      <filter id="letter-crumple">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="3" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="paper-light" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" seed="5" result="noise"/>
+        <feGaussianBlur in="noise" stdDeviation="0.6" result="heightmap"/>
+        <feDiffuseLighting in="heightmap" lighting-color="#ffffff" surfaceScale="3" result="diff">
+          <feDistantLight azimuth="225" elevation="45"/>
+        </feDiffuseLighting>
+        <feSpecularLighting in="heightmap" lighting-color="#ffffff" surfaceScale="1.5" specularConstant="0.2" specularExponent="10" result="spec">
+          <feDistantLight azimuth="225" elevation="45"/>
+        </feSpecularLighting>
+        <feComposite in="diff" in2="SourceAlpha" operator="in" result="lit"/>
+        <feComposite in="spec" in2="SourceAlpha" operator="in" result="specLit"/>
+        <feMerge>
+          <feMergeNode in="SourceGraphic"/>
+          <feMergeNode in="lit"/>
+          <feMergeNode in="specLit"/>
+        </feMerge>
+      </filter>
+    </svg>
+
+    <main class="page page-transition active message-group" role="main">
+      <article class="letter" aria-label="Letter">
+        <div class="paper-surface" aria-hidden="true"></div>
+        <div class="letter-content">
+          <h1 class="fade-seq">hi yejj!!</h1>
+          <p class="fade-seq">well I just want to say that happiest 18th birthday! From 16 years old Tayo nag kakilala Ngayon 18 kana its been 2 years na den Pala. Thank u Kasi naging friend kita then naging nanliligaw na ka M.U. Thank Kasi natitiis mo ko palagi, sa mga efforts mo Lalo na Nung lumalabas kana sa comfort zone mo para lang sakin, sorry Kasi kahit alam ko lahat ng effort na ginagawa mo sakin is lagi Akong overthink and sorry den Kasi I always dissapoint you in every way I do, though it's not really what I meant and yes to be honest, nare-realize ko na masyado Pala talaga Akong nasanay sayo like parang nawala ung part ng self ko HAHAHAH. sorry den Kasi masyado Ako na kampante na di mo me iiwan and sometimes di ko nacoconsider Yung feelings mo. And sorry dahil sakin na pressure ka HAHA, Mali Pala delivery ko ng word na yun, nalaman ko lng Yung full context na Hindi ung tipong pag hihiwalayin talaga since bet ka den pala nila mama Kasi magakang kadaw, mabait and they feel na love mo talaga Ako dati it's just that kaya ganun Sila Kasi Bata padaw Tayo masyado sa mga ganung bagay HAHA. damn. I know na dapat di ko na sinasabi pero yah want ko Sabihin Kasi dapat inalam ko toh dati pa. Pero Ayun it is, what it is. I just hope that mag grow Tayo pareho in a way na kayang kaya na natin gawin and bilhin lahat ng mga gusto natin na Buhay kahit wala na yung Tayo and syempre Kay Lord. Lagi kitang sinasama sa mga prayers ko. Thank you for all that you do ah, I really really appreciate it! Sorry talaga sa lahat ng mga kasalanan ko. Always take care of yourself okay? Dream higher, do your best, fight for what really is yours, and tatagan mo lagi loob mo and ung mental health mo! Ayun lang Blessed Happiest 18th birthday!!</p>
+        </div>
+      </article>
+
+      <div class="nav-controls">
+        <a class="btn" href="page2.html">View Gallery</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
