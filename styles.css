@@ -90,6 +90,16 @@ body{
   .nav-toggle{display:none}
 }
 
+/* Texture Cleaner */
+.cleaner-controls{display:flex;gap:12px;align-items:center;justify-content:center;padding:12px}
+.cleaner-grid{display:grid;grid-template-columns:1fr;gap:16px;padding:16px;max-width:1200px;margin:0 auto}
+.cleaner-card{background:#fff;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.18);padding:12px}
+.cleaner-pair{display:grid;grid-template-columns:1fr;gap:10px}
+.cleaner-img{width:100%;height:auto;display:block;border-radius:8px;background:#eee}
+.metrics{display:flex;gap:14px;flex-wrap:wrap;font-size:.9rem;color:#333;padding-top:8px}
+.download-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;text-decoration:none}
+@media(min-width:768px){.cleaner-grid{grid-template-columns:1fr 1fr}.cleaner-pair{grid-template-columns:1fr 1fr}}
+
 .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .25s ease;display:grid;place-items:center;z-index:10000}
 .lightbox.open{opacity:1;pointer-events:auto}
 .viewer{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;width:min(1200px,92vw);max-height:92vh;background:#fff;border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,.35);overflow:hidden}
